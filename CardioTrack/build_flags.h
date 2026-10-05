@@ -11,7 +11,7 @@
 //   6 = PCB          real sensors, real deep sleep, 60 s / 300 s, battery divider
 // ---------------------------------------------------------------------------
 #ifndef CT_PROFILE
-#define CT_PROFILE 1
+#define CT_PROFILE 4
 #endif
 
 // Mix and match while wiring sensors: with profile 5 or 6, uncomment the ones NOT wired yet.
@@ -19,6 +19,10 @@
 // #define USE_MOCK_PPG
 // #define USE_MOCK_IMU
 // #define USE_MOCK_TEMP
+
+// ECG stream profiles (3, 4): print one summary line per second to the Serial Monitor.
+// Comment this out to get raw samples for the Serial Plotter instead.
+#define ECG_STREAM_TEXT
 
 #if CT_PROFILE == 1
   #define BOARD_BREADBOARD_V1
